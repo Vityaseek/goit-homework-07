@@ -40,7 +40,6 @@ def sort_folder(path: Path):
         if item.is_file():
             cat = get_category(item)
             move_file(item, path, cat)
-            print(item)
 
 
 def unpack_archice(path: Path):
@@ -48,14 +47,12 @@ def unpack_archice(path: Path):
         try:
             shutil.unpack_archive(
                 item, f'{item}{item.stem}')
-            print('good')
         except shutil.ReadError:
             continue
 
 
 def main():
     try:
-        # path = Path(r'C:\Users\Ulfanzer\Desktop\Testfolder')
         path = Path(sys.argv[1])
     except IndexError:
         return "No path folder"
@@ -66,7 +63,6 @@ def main():
     sort_folder(path)
     remove_dir(path)
     unpack_archice(path)
-    return 'All ok'
 
 
 if __name__ == '__main__':
