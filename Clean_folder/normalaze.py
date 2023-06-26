@@ -33,3 +33,6 @@ def normalazie(path):
                 i = str(i).replace(i, '_')
                 string += i
     return string
+
+if __name__ == '__main__':
+    normalazie()

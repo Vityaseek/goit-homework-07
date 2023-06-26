@@ -2,7 +2,7 @@ from pathlib import Path
 import sys
 import shutil
 
-from normalaze import normalazie
+from clean_folder.normalaze import normalazie
 
 CATEGORIES = {'Images': ['.JPEG', '.PNG', '.JPG', '.SVG'],
               'video': ['.AVI', '.MP4', '.MOV', '.MKV'], 'Document': ['.DOC', '.DOCX', '.TXT', '.PDF', '.XLSX', '.PPTX'],
@@ -66,4 +66,4 @@ def main():
 
 
 if __name__ == '__main__':
-    print(main())
+    main()
