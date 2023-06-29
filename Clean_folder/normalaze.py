@@ -20,7 +20,6 @@ for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
 
 def normalazie(path):
     for_name = path.translate(TRANS)
-    print(type(for_name))
     for_name = Path(for_name)
     string = ''
     for i in for_name.stem:
